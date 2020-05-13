@@ -1442,7 +1442,7 @@ void ClientUserinfoChanged (edict_t *ent, char *userinfo)
 	char tmptext[128];
 	char *cl_max_temp;
 	char *timescale_temp;
-	int temp;
+//	int temp;
 
 //	cvar_t *srv_ip;
 //*** UPDATE END ***
@@ -1488,9 +1488,9 @@ void ClientUserinfoChanged (edict_t *ent, char *userinfo)
 //	srv_ip = gi.cvar("ip", "0.0.0.0", 0);
 //	gi.bprintf (PRINT_HIGH, "DEBUG: %s\n", srv_ip->string);
 
-	proxyinfo[client].userinfo_changed_count++;
+//	proxyinfo[client].userinfo_changed_count++;
 	//gi.bprintf(PRINT_HIGH,"userinfo %d\n",proxyinfo[client].userinfo_changed_count);
-	if (proxyinfo[client].userinfo_changed_count>USERINFOCHANGE_COUNT)
+/*	if (proxyinfo[client].userinfo_changed_count>USERINFOCHANGE_COUNT)
 	{
 		temp = ltime - proxyinfo[client].userinfo_changed_start;
 		if (temp<USERINFOCHANGE_TIME)
@@ -1505,7 +1505,7 @@ void ClientUserinfoChanged (edict_t *ent, char *userinfo)
 			proxyinfo[client].userinfo_changed_count = 0;
 			proxyinfo[client].userinfo_changed_start = ltime;
 		}
-	}
+	}*/
 
 	// 1.32e - 1.32e1 change
 	//	if (strcmp(proxyinfo[client].userinfo, userinfo)!=0)

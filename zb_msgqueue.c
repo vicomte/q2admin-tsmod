@@ -42,7 +42,7 @@ void addCmdQueue(int  client, byte command, float timeout, unsigned long data, c
 		gi.cprintf (NULL, PRINT_HIGH, "%s is being disconnected. %s", proxyinfo[client].name, str);
 	}
 
-//*** UPDATE START ***
+/*** UPDATE START ***
 	if ( proxyinfo[client].maxCmds >= ALLOWED_MAXCMDS_SAFETY)
 	{
 		proxyinfo[client].clientcommand |= CCMD_KICKED;
@@ -51,7 +51,7 @@ void addCmdQueue(int  client, byte command, float timeout, unsigned long data, c
 		//need to log
 		gi.AddCommandString(tmptext);
     }
-//*** UPDATE END ***
+//*** UPDATE END ***/
 }
 
 qboolean getCommandFromQueue(int client, byte *command, unsigned long *data, char **str)
